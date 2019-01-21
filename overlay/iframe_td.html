@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>iframe</title>
+    <style type="text/css">
+        body {
+            width: 600px;
+            height: 300px;
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        }
+        h1 {
+            padding: 10px;
+        }
+        div#container {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 2em;
+            font-size: 13px;
+        }
+        a {
+        	color: #000000;
+        	text-decoration: none;
+        }
+        a:hover {
+        	text-decoration: underline;
+        }
+        #thumbs {
+        	text-align: center;
+        	width: 100%;
+        	margin: 0 auto;
+        }
+        #item {
+            width: 150px; 
+            vertical-align: top; 
+            display: inline-block;
+            margin: 0 10px;
+        }
+    </style>    
+</head>
+
+<body>
+	<div id="container">
+	    <h1 style="text-align: center;">OPS! Não vá embora ainda.<br>Você pode se interessar por:</h1>
+	    <div id="thumbs">
+		    <div id="item">
+		        <a onclick="send(['quanto-vale-um-viajante', 'http://www.transformacaodigital.com.br/quanto-vale-um-viajante/']);" href="#"><img src="http://www.transformacaodigital.com.br/wp-content/uploads/2016/09/QuantoValeUmViajante-ptbr-1-728x387.jpg" width="150" height="100" alt=""><br>Quanto vale um viajante?</a>
+		    </div>
+		    <div id="item">
+		        <a onclick="send(['a-internet-como-forma-estrategica-para-enfrentar-a-crise', 'http://www.transformacaodigital.com.br/a-internet-como-forma-estrategica-para-enfrentar-a-crise/']);" href="#"><img src="http://www.transformacaodigital.com.br/wp-content/uploads/2016/05/6-A-Internet-como-forma-estrat%C3%A9gica-para-enfrentar-a-crise-PT.jpg" width="150" height="100" alt=""><br>A Internet como forma estratégica para enfrentar a crise.</a>
+		    </div>
+		    <div id="item">
+		        <a onclick="send(['como-ser-competitivo-na-era-digital', 'http://www.transformacaodigital.com.br/como-ser-competitivo-na-era-digital/']);" href="#"><img src="http://www.transformacaodigital.com.br/wp-content/uploads/2016/10/ComoSerCompetitivoNaEraDigital-PT-728x387.jpg" width="150" height="100" alt=""><br>Como ser competitivo na era digital</a>
+		    </div>
+		</div>
+	</div>
+    
+    <script>
+        function send(params) {
+            
+            parent.postMessage(params, "*");
+        }
+    </script>
+</body>
+</html>

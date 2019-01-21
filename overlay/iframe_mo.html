@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>iframe</title>
+    <style type="text/css">
+        body {
+            width: 600px;
+            height: 300px;
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        }
+        h1 {
+            padding: 10px;
+        }
+        div#container {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 2em;
+            font-size: 13px;
+        }
+        a {
+        	color: #000000;
+        	text-decoration: none;
+        }
+        a:hover {
+        	text-decoration: underline;
+        }
+        #thumbs {
+        	text-align: center;
+        	width: 100%;
+        	margin: 0 auto;
+        }
+    </style>    
+</head>
+
+<body>
+	<div id="container">
+	    <h1 style="text-align: center;">OPS! Não vá embora ainda.<br>Você pode se interessar por:</h1>
+	    <div id="thumbs">
+		    <div style="width: 130px; vertical-align: top; display: inline-block; margin: 0 10px 0 0;">
+		        <a onclick="send(['como-remover-e-nao-permitir-a-criacao-de-arquivos-thumbs-db', 'http://www.maicololiveira.com.br/como-remover-e-nao-permitir-a-criacao-de-arquivos-thumbs-db/']);" href="#"><img src="http://www.maicololiveira.com.br/wp-content/uploads/2012/11/thumbsdb_featured-120x80.jpg" width="" alt=""><br>Como remover e não permitir a criação de arquivos thumbs.db</a>
+		    </div>
+		    <div style="width: 130px; vertical-align: top; display: inline-block; margin: 0 10px 0 0;">
+		        <a onclick="send(['recarga-de-bilhete-unico-com-o-aplicativo-moovit', 'http://www.maicololiveira.com.br/recarga-de-bilhete-unico-com-o-aplicativo-moovit']);" href="#"><img src="http://www.maicololiveira.com.br/wp-content/uploads/2016/03/bilhete_unico-120x80.jpg" width="" alt=""><br>Recarga de bilhete único com o aplicativo Moovit</a>
+		    </div>
+		    <div style="width: 130px; vertical-align: top; display: inline-block;">
+		        <a onclick="send(['1password-vs-lastpass-vs-keepass-qual-melhor-gerenciador-de-senhas', 'http://www.maicololiveira.com.br/1password-vs-lastpass-vs-keepass-qual-melhor-gerenciador-de-senhas']);" href="#"><img src="http://www.maicololiveira.com.br/wp-content/uploads/2016/02/1password-featured-120x80.jpg" width="" alt=""><br>1Password vs LastPass vs KeePass – Qual melhor gerenciador de senhas?</a>
+		    </div>
+		</div>
+	</div>
+    
+    <script>
+        function send(params) {
+            
+            parent.postMessage(params, "*");
+        }
+    </script>
+</body>
+</html>
